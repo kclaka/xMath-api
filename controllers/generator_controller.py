@@ -80,25 +80,3 @@ class GeneratorController:
             return jsonify(expression)
         except Exception as e:
             return jsonify({"error": str(e)}), 500
-
-    @staticmethod
-    def root_redirect():
-        """
-        Returns a funny math number with a witty comment.
-        """
-        funny_numbers = [
-            {"number": 3.14159, "description": "Pi - Deliciously infinite!"},
-            {"number": 2.71828, "description": "e - Naturally exponential!"},
-            {"number": 1.61803, "description": "Golden Ratio - Fibonacci-approved!"},
-            {"number": "∞", "description": "Infinity - Can't count this one."},
-            {"number": "-0", "description": "Negative zero? Mind blown."},
-            {"number": "5i", "description": "Imaginary number - It's not real, but it works!"},
-            {"number": "undefined", "description": "Divided by zero. Oops!"},
-            {"number": 42, "description": "42 - The Answer to the Ultimate Question of Life."},
-            {"number": 69, "description": "Nice."},
-            {"number": 404, "description": "Not Found... Just kidding, it's math!"}
-        ]
-
-        # Choose a random funny number
-        funny_number = random.choice(funny_numbers)
-        return jsonify(funny_number)

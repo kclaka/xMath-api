@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xMath API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.5;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to xMath API</h1>
+    <p>The xMath API provides random mathematical expressions with various operations. Below are the available routes and their descriptions:</p>
+
+    <h2>Routes</h2>
+    <ul>
+        <li>
+            <strong>Random Expression:</strong>
+            <code>/api/random</code> - Generates a random math expression.
+        </li>
+        <li>
+            <strong>Addition:</strong>
+            <code>/api/add</code> - Generates a random addition expression.
+        </li>
+        <li>
+            <strong>Subtraction:</strong>
+            <code>/api/sub</code> - Generates a random subtraction expression.
+        </li>
+        <li>
+            <strong>Multiplication:</strong>
+            <code>/api/mul</code> - Generates a random multiplication expression.
+        </li>
+        <li>
+            <strong>Division:</strong>
+            <code>/api/div</code> - Generates a random division expression.
+        </li>
+    </ul>
+
+    <h2>Parameters</h2>
+    <p>You can customize the API responses with the following parameters:</p>
+    <ul>
+        <li><code>?max</code>: Sets the maximum number in the expression.</li>
+        <li><code>?min</code>: Sets the minimum number in the expression.</li>
+        <li><code>?negative=1</code>: Allows negative results in subtraction.</li>
+    </ul>
+
+    <h2>Example Usage</h2>
+    <p>To get a random addition expression with numbers between 100 and 999:</p>
+    <code>https://x-math.azurewebsites.net/api/add?max=999&min=100</code>
+
+    <h2>Contact</h2>
+    <p>For more information, visit the <a href="https://github.com/kclaka/xMath-api">GitHub repository</a>.</p>
+</body>
+</html>

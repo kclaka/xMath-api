@@ -1,4 +1,4 @@
-from flask import Blueprint, Flask, redirect, url_for
+from flask import Blueprint, Flask, redirect, url_for, render_template
 from controllers.generator_controller import GeneratorController
 
 # Create a Blueprint for the API
@@ -10,7 +10,7 @@ api_blueprint.add_url_rule("/sub", view_func=GeneratorController.subtraction, me
 api_blueprint.add_url_rule("/mul", view_func=GeneratorController.multiplication, methods=["GET"])
 api_blueprint.add_url_rule("/div", view_func=GeneratorController.division, methods=["GET"])
 api_blueprint.add_url_rule("/random", view_func=GeneratorController.random_operation, methods=["GET"])
-api_blueprint.add_url_rule('/', view_func=GeneratorController.root_redirect, methods=['GET'])
+
 
 def register_routes(app: Flask):
     """
@@ -22,4 +22,5 @@ def register_routes(app: Flask):
 
     @app.route("/")
     def root():
-        return GeneratorController.root_redirect()
+        # Serve the documentation page at the root route
+        return render_template("index.html")  # Serve the documentation page
